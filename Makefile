@@ -6,7 +6,7 @@
 #    By: rkultaev <rkultaev@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/29 14:27:16 by rkultaev          #+#    #+#              #
-#    Updated: 2022/05/10 01:12:04 by rkultaev         ###   ########.fr        #
+#    Updated: 2022/06/23 15:43:09 by rkultaev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(NAME) : $(OBJ) $(HEADER)
 bonus : $(OBJ) $(bonus_objects) $(HEADER)
 	ar rcs $(NAME) $(OBJ) $(bonus_objects)
 
-all : $(NAME)
+all : $(NAME) 
 
 clean :
 	rm -f $(OBJ) $(bonus_objects)
