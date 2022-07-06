@@ -6,15 +6,11 @@
 /*   By: rkultaev <rkultaev@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 18:56:27 by rkultaev          #+#    #+#             */
-/*   Updated: 2022/04/29 02:58:47 by rkultaev         ###   ########.fr       */
+/*   Updated: 2022/06/25 12:50:32 by rkultaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (!(c >= 48 && c <= 57))
-	{
-		return (0);
-	}
-	return (1);
+	return (c >= 48 && c <= 57);
 }
