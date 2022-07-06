@@ -6,13 +6,13 @@
 /*   By: rkultaev <rkultaev@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 17:03:46 by rkultaev          #+#    #+#             */
-/*   Updated: 2022/05/10 00:56:43 by rkultaev         ###   ########.fr       */
+/*   Updated: 2022/06/26 17:44:28 by rkultaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_words(char const *str, char c)
+size_t	count_words(char const *str, char c)
 {
 	int	i;
 	int	num;

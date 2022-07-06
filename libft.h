@@ -6,7 +6,7 @@
 /*   By: rkultaev <rkultaev@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 20:53:01 by rkultaev          #+#    #+#             */
-/*   Updated: 2022/05/09 22:29:50 by rkultaev         ###   ########.fr       */
+/*   Updated: 2022/07/01 10:06:14 by rkultaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <string.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -42,6 +54,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strrchr(const char *s, int c);
 char	**ft_split(char const *s, char c);
+size_t	count_words(char const *str, char c);
+
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -69,5 +83,14 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 int		ft_lstsize(t_list *lst);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+size_t	ft_strlen(const char *c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	*ft_calloc(size_t count, size_t size);
+
+char	*handling_static_with_temp(char *ptr_buffer, char *static_buff);
+char	*get_next_line(int fd);
 
 #endif

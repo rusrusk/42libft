@@ -6,7 +6,7 @@
 /*   By: rkultaev <rkultaev@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 13:01:17 by rkultaev          #+#    #+#             */
-/*   Updated: 2022/05/10 00:45:12 by rkultaev         ###   ########.fr       */
+/*   Updated: 2022/07/06 16:14:05 by rkultaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
 	int	s_length;
 
 	s_length = ft_strlen(s);
-	i = 0;
 	if (s)
 	{
 		while (s_length >= 0)
